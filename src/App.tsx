@@ -1,5 +1,8 @@
 import "./App.scss"
 
+import Main from "./components/Main/Main"
+import { beers } from "./Data/Beers"
+
 function App() {
  
 
@@ -7,7 +10,8 @@ function App() {
     <>
   
       <div>
-        <p>connected</p>
+      <h1>Punk Api</h1>
+      <Main beers={beers} />
        </div>
        </>
   )
