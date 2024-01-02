@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Punk API Beer Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application that interacts with the [Punk API](https://punkapi.com/) to display a collection of beers. The application includes a search function, a filter feature, and routing capabilities to navigate to detailed pages for each beer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Search Function
 
-## Expanding the ESLint configuration
+The application allows users to search for specific beers using the search functionality. Simply input the desired beer name or keyword into the search bar, and the application will display relevant results.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Filter Function
 
-- Configure the top-level `parserOptions` property like this:
+Users can filter the displayed beers based on various criteria, providing a personalized experience. Filters may include options such as beer type, alcohol content, or any other relevant categories.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Beer Details Page
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Clicking on a beer in the list will navigate the user to a dedicated page displaying detailed information about the selected beer. This could include details such as the beer's description, image, brewing method, and more.
+
+## Visit the deployed github page by clicking the link below
+
+https://deeqajamalini.github.io/punk-api-project/
