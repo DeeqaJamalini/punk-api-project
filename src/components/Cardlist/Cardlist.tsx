@@ -1,6 +1,6 @@
-
-import Card from '../Card/Card';
-import { Beer } from '../../Types/Types';
+import Card from "../Card/Card";
+import { Beer } from "../../Types/Types";
+import "./CardList.scss";
 
 type CardListProps = {
   beers: Beer[];

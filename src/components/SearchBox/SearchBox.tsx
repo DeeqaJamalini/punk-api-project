@@ -1,5 +1,5 @@
-// SearchBox.tsx
-import { ChangeEvent } from 'react';
+
+import { ChangeEvent } from "react";
 
 type SearchBoxProps = {
   // Function to be called when a search query is inputted
@@ -23,6 +23,6 @@ const SearchBox = ({ onSearch }: SearchBoxProps) => {
       />
     </div>
   );
-}
+};
 
 export default SearchBox;

@@ -1,6 +1,6 @@
-
-import { useParams } from 'react-router-dom';
-import { Beer } from '../../Types/Types';
+import { useParams } from "react-router-dom";
+import { Beer } from "../../Types/Types";
+import "./BeerDetail.scss";
 
 type BeerDetailProps = {
   beers: Beer[];
@@ -20,25 +20,36 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
 
   return (
     <div className="beer-detail">
-      {/* Display the name of the selected beer */}
-      <h1>{selectedBeer.name}</h1>
-      
-      {/* Display the image of the selected beer */}
-      <img src={selectedBeer.image_url} alt={selectedBeer.name} />
-      
-      {/* Display the tagline, description, and other details of the selected beer */}
-      <p>{selectedBeer.tagline}</p>
-      <p>{selectedBeer.description}</p>
-      <p>{selectedBeer.first_brewed}</p>
-      <p>{selectedBeer.abv}</p>
-      <p>{selectedBeer.ph}</p>
-      <p>{selectedBeer.attenuation_level}</p>
-      <p>{selectedBeer.volume.value}</p>
-      <p>{selectedBeer.volume.unit}</p>
-      <p>{selectedBeer.ingredients.yeast}</p>
-      <p>{selectedBeer.food_pairing}</p>
-      <p>{selectedBeer.brewers_tips}</p>
-      
+      <div className="beer-detail__content">
+        <h1 className="beer-detail__name">{selectedBeer.name}</h1>
+        <img
+          className="beer-detail__image"
+          src={selectedBeer.image_url}
+          alt={selectedBeer.name}
+        />
+
+        <p className="beer-detail__detail">{selectedBeer.tagline}</p>
+        <p className="beer-detail__detail">
+          DESCRIPTION: {selectedBeer.description}
+        </p>
+        <p className="beer-detail__detail">
+          FIRST BREWED: {selectedBeer.first_brewed}
+        </p>
+        <p className="beer-detail__detail">ABV: {selectedBeer.abv}</p>
+        <p className="beer-detail__detail">PH: {selectedBeer.ph}</p>
+        <p className="beer-detail__detail">
+          ATTENUATION LEVEL: {selectedBeer.attenuation_level}
+        </p>
+        <p className="beer-detail__detail">
+          INGREDIENTS: {selectedBeer.ingredients.yeast}
+        </p>
+        <p className="beer-detail__detail">
+          FOOD PAIRING: {selectedBeer.food_pairing}
+        </p>
+        <p className="beer-detail__detail">
+          BREWERS TIPS: {selectedBeer.brewers_tips}
+        </p>
+      </div>
     </div>
   );
 };
