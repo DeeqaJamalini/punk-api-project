@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Main from "./components/Main/Main";
 import { Beer } from "./Types/Types";
 import BeerDetail from "./components/BeerDetail/BeerDetail";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 
 const App = () => {
