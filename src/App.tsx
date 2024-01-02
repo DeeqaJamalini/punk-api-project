@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Main from "./components/Main/Main";
 import { Beer } from "./Types/Types";
 import BeerDetail from "./components/BeerDetail/BeerDetail";
@@ -10,11 +10,15 @@ const App = () => {
   const [beers, setBeers] = useState<Beer[]>([]);
 
   useEffect(() => {
-    // Fetch beer data from the Punk API when the component mounts
+    // Effect to fetch beer data from the Punk API when the component mounts
+
     const fetchBeers = async () => {
       try {
-        const response = await fetch("https://api.punkapi.com/v2/beers");
+        // Fetch beer data from the Punk API
+        const response = await fetch("https://api.punkapi.com/v2/beers?page=1&per_page=80");
         const data = await response.json();
+        
+        // Set the retrieved beer data in the state
         setBeers(data);
       } catch (error) {
         // Log an error message if there's an issue fetching beer data
@@ -22,7 +26,10 @@ const App = () => {
       }
     };
 
+    // Invoke the fetchBeers function when the component mounts
     fetchBeers();
+
+    // The empty dependency array ensures that this effect runs only once when the component mounts
   }, []);
 
   return (
