@@ -1,13 +1,13 @@
-
+// CardList.tsx
 import React from 'react';
 import Card from '../Card/Card';
 import { Beer } from '../../Types/Types';
 
 type CardListProps = {
   beers: Beer[];
-}
+};
 
-const CardList = ({ beers }: CardListProps) => {
+const CardList = ({ beers }: CardListProps)  => {
   return (
     <div className="card-list">
       {beers.map((beer) => (
@@ -15,6 +15,6 @@ const CardList = ({ beers }: CardListProps) => {
       ))}
     </div>
   );
-};
+}
 
 export default CardList;
