@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
+
+.beer-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.beer-detail__content {
+  margin-top: 30px;
+  width: 50%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pink;
+  font-family: "happy monkey";
+  font-weight: bold;
+}
+
+.beer-detail__image {
+  padding-top: 20px;
+  height: 400px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-detail__name {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.beer-detail__detail {
+  margin-bottom: 10px;
+  width: 50%;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .beer-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .beer-detail__content {
+    width: 80%;
+    padding-left: 0;
+  }
+
+  .beer-detail__image {
+    width: 100%;
+  }
+
+  .beer-detail__detail {
+    width: 80%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

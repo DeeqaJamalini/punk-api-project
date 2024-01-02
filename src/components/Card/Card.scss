@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  width: 350px;
+  height: 350px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-family: "Dancing Script", cursive;
+    color: #ec4c58;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__tagline {
+    color: #ec4c58;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 12px 0;
+
+    font-family: "Happy Monkey", cursive;
+  }
+
+  &__button {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #de639a;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #f7b2b7;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

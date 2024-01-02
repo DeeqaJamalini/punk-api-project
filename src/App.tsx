@@ -1,10 +1,9 @@
-
-import { useEffect, useState } from 'react';
-import Main from './components/Main/Main';
-import { Beer } from './Types/Types';
-import BeerDetail from './components/BeerDetail/BeerDetail';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.scss';
+import { useEffect, useState } from "react";
+import Main from "./components/Main/Main";
+import { Beer } from "./Types/Types";
+import BeerDetail from "./components/BeerDetail/BeerDetail";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.scss";
 
 const App = () => {
   // State variable to store the list of beers
@@ -14,12 +13,12 @@ const App = () => {
     // Fetch beer data from the Punk API when the component mounts
     const fetchBeers = async () => {
       try {
-        const response = await fetch('https://api.punkapi.com/v2/beers');
+        const response = await fetch("https://api.punkapi.com/v2/beers");
         const data = await response.json();
         setBeers(data);
       } catch (error) {
         // Log an error message if there's an issue fetching beer data
-        console.error('Error fetching beer data:', error);
+        console.error("Error fetching beer data:", error);
       }
     };
 
@@ -42,13 +41,10 @@ const App = () => {
           }
         />
         {/* Route for displaying details of a specific beer */}
-        <Route
-          path="/beer/:id"
-          element={<BeerDetail beers={beers} />}
-        />
+        <Route path="/beer/:id" element={<BeerDetail beers={beers} />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
