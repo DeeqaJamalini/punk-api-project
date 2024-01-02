@@ -51,7 +51,7 @@
     font-family: "Happy Monkey", cursive;
   }
 
-  &__button {
+  &__link {
     margin-top: auto;
     padding: 10px;
     background-color: #de639a;
@@ -60,7 +60,8 @@
     text-decoration: none;
     border: none;
     width: 100%;
-    cursor: pointer;
+    height: 30px;
+cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {

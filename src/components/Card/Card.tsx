@@ -23,8 +23,8 @@ const Card = ({ beer }: CardProps) => {
         to={`/beer/${beer.id}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="card__button">
-        <button className="card__button">Click for More Info</button>
+        className="card__link">
+        Click for more details
       </Link>
     </div>
   );
