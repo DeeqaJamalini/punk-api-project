@@ -1,5 +1,5 @@
-// Main.tsx
-import React, { useState, useEffect } from 'react';
+
+import { useState, useEffect } from 'react';
 import CardList from '../Cardlist/Cardlist';
 import Navbar from '../Navbar/Navbar';
 import { Beer } from '../../Types/Types';
@@ -8,18 +8,22 @@ type MainProps = {
   beers: Beer[];
 };
 
-function Main({ beers }: MainProps) {
+const Main = ({ beers }: MainProps) => {
+  // State variables for search query and filter
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
     // You can include additional logic here if needed when 'beers' prop changes
+    // For example, fetching additional data or updating state
   }, [beers]);
 
+  // Handler for updating the search query state
   const handleSearch = (query: string) => {
     setSearchQuery(query);
   };
 
+  // Handler for updating the filter state
   const handleFilter = (selectedFilter: string) => {
     setFilter(selectedFilter);
   };
@@ -43,8 +47,12 @@ function Main({ beers }: MainProps) {
   });
 
   return (
+    // Main container for the application
     <div className="main">
+      {/* Navbar component for search and filter functionality */}
       <Navbar onSearch={handleSearch} onFilter={handleFilter} />
+
+      {/* CardList component displaying filtered beers */}
       <CardList beers={filteredBeers} />
     </div>
   );
