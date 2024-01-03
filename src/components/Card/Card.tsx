@@ -19,11 +19,7 @@ const Card = ({ beer }: CardProps) => {
       <p className="card__tagline">{beer.tagline}</p>
 
       {/* Uses Link with a button to open beer details in a new tab */}
-      <Link
-        to={`/beer/${beer.id}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="card__link">
+      <Link to={`/beer/${beer.id}`} className="card__link">
         Click for more details
       </Link>
     </div>
