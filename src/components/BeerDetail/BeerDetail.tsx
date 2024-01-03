@@ -32,10 +32,7 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
           alt={selectedBeer.name}
         />
 
-        
-        <p className="beer-detail__detail">
-          {selectedBeer.description}
-        </p>
+        <p className="beer-detail__detail">{selectedBeer.description}</p>
         <p className="beer-detail__detail">
           FIRST BREWED: {selectedBeer.first_brewed}
         </p>

@@ -1,4 +1,4 @@
-
+import "./SearchBox.scss";
 import { ChangeEvent } from "react";
 
 type SearchBoxProps = {
@@ -17,6 +17,7 @@ const SearchBox = ({ onSearch }: SearchBoxProps) => {
     <div className="search-box">
       {/* Input field for typing search queries */}
       <input
+        className="search-box__input"
         type="text"
         placeholder="Search beers"
         onChange={handleSearchChange}
