@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap");
 
 .beer-detail {
   display: flex;
@@ -6,58 +6,90 @@
   justify-content: center;
 
   height: 100%;
-}
 
-.beer-detail__content {
-  margin-top: 30px;
-  width: 50%;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: pink;
-  font-family: "happy monkey";
-  font-weight: bold;
-}
-
-.beer-detail__image {
-  padding-top: 20px;
-  height: 400px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-.beer-detail__name {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.beer-detail__detail {
-  margin-bottom: 10px;
-  width: 50%;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-@media only screen and (max-width: 768px) {
-  .beer-detail {
+  &__content {
+    margin-top: 30px;
+    width: 50%;
+    padding: 20px;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: pink;
+    font-family: "Oxanium";
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   }
 
-  .beer-detail__content {
-    width: 80%;
-    padding-left: 0;
+  &__image {
+    padding-top: 20px;
+    height: 400px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
   }
 
-  .beer-detail__image {
-    width: 100%;
+  &__name {
+    margin-bottom: 10px;
+    text-align: center;
   }
 
-  .beer-detail__detail {
-    width: 80%;
-    margin-left: 0;
-    margin-right: 0;
+  &__detail {
+    margin-bottom: 10px;
+    width: 50%;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  &__button {
+    background-color: #fff;
+    color: #7f2982;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive;
+    margin-right: 5px;
+
+    &:hover {
+      background-color: #f7b2b7;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .beer-detail {
+      flex-direction: column;
+      align-items: center;
+
+      &__content {
+        width: 80%;
+        padding-left: 0;
+      }
+
+      &__image {
+        width: 50%;
+      }
+
+      &__detail {
+        width: 80%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &__button {
+        background-color: #fff;
+        color: #7f2982;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: "Comic Sans MS", cursive;
+        margin-right: 5px;
+
+        &:hover {
+          background-color: #f7b2b7;
+        }
+      }
+    }
   }
 }

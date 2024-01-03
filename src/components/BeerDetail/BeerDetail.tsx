@@ -18,6 +18,10 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
     return <div>Beer not found</div>;
   }
 
+  const handleReturn = () => {
+    history.go(-1); // Go back to the previous page
+  };
+
   return (
     <div className="beer-detail">
       <div className="beer-detail__content">
@@ -28,9 +32,9 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
           alt={selectedBeer.name}
         />
 
-        <p className="beer-detail__detail">{selectedBeer.tagline}</p>
+        
         <p className="beer-detail__detail">
-          DESCRIPTION: {selectedBeer.description}
+          {selectedBeer.description}
         </p>
         <p className="beer-detail__detail">
           FIRST BREWED: {selectedBeer.first_brewed}
@@ -49,6 +53,10 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
         <p className="beer-detail__detail">
           BREWERS TIPS: {selectedBeer.brewers_tips}
         </p>
+        {/* Return button */}
+        <button className="beer-detail__button" onClick={handleReturn}>
+          Return
+        </button>
       </div>
     </div>
   );
