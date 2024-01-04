@@ -7,20 +7,21 @@ type BeerDetailProps = {
 };
 
 const BeerDetail = ({ beers }: BeerDetailProps) => {
-  // Extracts the beer ID from the URL parameters
+  
   const { id } = useParams<{ id: string }>();
 
-  // Finds the selected beer based on the ID
+  
   const selectedBeer = beers.find((beer) => beer.id.toString() === id);
 
-  // If the selected beer is not found, displays an error message
+  
   if (!selectedBeer) {
     return <div>Beer not found</div>;
   }
 
   const handleReturn = () => {
-    history.go(-1); // Go back to the previous page
+    history.go(-1); 
   };
+  
 
   return (
     <div className="beer-detail">
@@ -50,7 +51,7 @@ const BeerDetail = ({ beers }: BeerDetailProps) => {
         <p className="beer-detail__detail">
           BREWERS TIPS: {selectedBeer.brewers_tips}
         </p>
-        {/* Return button */}
+        
         <button className="beer-detail__button" onClick={handleReturn}>
           Return
         </button>

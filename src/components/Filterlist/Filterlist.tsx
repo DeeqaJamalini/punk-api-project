@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Filterlist.scss";
 
 type FilterListProps = {
-  // Function to be called when a filter button is clicked, takes a filter string as an argument
+
   onFilter: (filter: string) => void;
 };
 
@@ -10,9 +10,9 @@ const FilterList = ({ onFilter }: FilterListProps) => {
   const [selectedFilter, setSelectedFilter] = useState<string>("allBeers");
 
   return (
-    // Container for the list of filter buttons
+    
     <div className="filter-list">
-      {/* Button to filter and display all beers */}
+     
       <button
         className={`filter-list__button ${
           selectedFilter === "allBeers" ? "active" : ""
@@ -24,7 +24,7 @@ const FilterList = ({ onFilter }: FilterListProps) => {
         All Beers
       </button>
 
-      {/* Button to filter and display beers with high alcohol content */}
+     
       <button
         className={`filter-list__button ${
           selectedFilter === "highAlcohol" ? "active" : ""
@@ -36,7 +36,7 @@ const FilterList = ({ onFilter }: FilterListProps) => {
         High Alcohol
       </button>
 
-      {/* Button to filter and display beers in the classic range */}
+     
       <button
         className={`filter-list__button ${
           selectedFilter === "classicRange" ? "active" : ""
@@ -48,7 +48,7 @@ const FilterList = ({ onFilter }: FilterListProps) => {
         Classic Range
       </button>
 
-      {/* Button to filter and display beers with high acidity */}
+      
       <button
         className={`filter-list__button ${
           selectedFilter === "highAcidity" ? "active" : ""
