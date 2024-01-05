@@ -47,12 +47,13 @@ const Main = ({ beers }: MainProps) => {
   return (
     
     <div className="main">
-    
       <Navbar onSearch={handleSearch} onFilter={handleFilter} />
-
       <div className="main__content">
-        
-        <CardList beers={filteredBeers} />
+        {filteredBeers.length > 0 ? (
+          <CardList beers={filteredBeers} />
+        ) : (
+          <p className="main__error">No beers found with that name</p>
+        )}
       </div>
     </div>
   );
